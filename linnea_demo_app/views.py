@@ -32,6 +32,7 @@ def create_input(request):
         response_data['git_version'] = '3d1ce0ed251180eb31bc7f8dcbb169e43c6cfff6'
         
 
+        ########
         # Post.objects.create(
         #     description = description,
         #     answer = response_data['answer'],

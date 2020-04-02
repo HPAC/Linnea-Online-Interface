@@ -48,6 +48,8 @@ for (var e in examples) {
       $("#txtExpr").val(code);
       $("#txtExpr").html(code);
 
+      $("#lblError").css('visibility', 'hidden');
+
       model.setInput(code);
     };
     $("#example_" + e).click(setExample);

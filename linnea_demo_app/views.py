@@ -19,6 +19,7 @@ def create_input(request):
                 result = answer,
                 git_version = '3d1ce0ed251180eb31bc7f8dcbb169e43c6cfff6',
             )
+            response_data['answer'] = answer
         except Exception as e:
             print(e)
             FResult.objects.create(
@@ -27,8 +28,8 @@ def create_input(request):
                 reason = 'Expression Error!!!',
                 git_version = '3d1ce0ed251180eb31bc7f8dcbb169e43c6cfff6',
             )
+            response_data['answer'] = e
         
-        response_data['answer'] = answer
         response_data['git_version'] = '3d1ce0ed251180eb31bc7f8dcbb169e43c6cfff6'
         
 
